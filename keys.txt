@@ -1,0 +1,5 @@
+API_KEY = b64Yh2GPj992uCzsWmqklXpXL
+API_SECRET_KEY = AY7O9jMS3XxXYzGPmeVhLP1a4jnE8kIVYutwApl9mQqNRwePk6
+BEARER_TOKEN = AAAAAAAAAAAAAAAAAAAAAKlOhAEAAAAAY3Q%2BHHWUqQd07q%2FBy30eZVHy0pU%3Dg1YUphjI7cZmqyEGWzThmFITk0lqo8yx0EAIJWp6Hb9fLfZdxi
+
+https://developer.twitter.com/en/docs/twitter-api/rate-limits
