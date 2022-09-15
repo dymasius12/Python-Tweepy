@@ -4,7 +4,8 @@
 
 <p align="justify"> Hi this is a working code for the Video: <b> 30 Days of Python - Day 21 - Twitter API with Tweepy - Python TUTORIAL </b> This tutorial is from the Youtube video by <b>CodingEntrepreneurs</b> </p>
 <br />
-https://www.youtube.com/watch?v=dvAurfBB6Jk&list=PLEsfXFp6DpzQjDBvhNy5YbaBx9j-ZsUe6&index=21
+TwitterAPI(v1) https://www.youtube.com/watch?v=dvAurfBB6Jk&list=PLEsfXFp6DpzQjDBvhNy5YbaBx9j-ZsUe6&index=21
+TwitterAPI(v2) https://www.youtube.com/watch?v=0EekpQBEP_8
 <br />
 
 ### Some Important notes:
