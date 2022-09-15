@@ -1,3 +1,0 @@
-API_KEY = b64Yh2GPj992uCzsWmqklXpXL
-
-https://developer.twitter.com/en/docs/twitter-api/rate-limits
