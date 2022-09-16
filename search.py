@@ -16,36 +16,39 @@ response = client.search_recent_tweets(query=query, max_results=100, tweet_field
 users = {u['id']: u for u in response.includes['users']}
 
 #declare empty list
+i = 0
+all_information = load_data(SAVED_DATA)
 
-for i, tweet in response.data:
-    information = {}
-    load_data(SAVED_DATA)
+for tweet in response.data:
+    i += 1
 
+    #making sure user has id
     if users[tweet.author_id]:
         user = users[tweet.author_id]
+        # Passing the value
+        userid = tweet.id
+        language = tweet.lang
+        username = user.username
+        profile_image = user.profile_image_url
+        tweet_text = tweet.text
 
-    userid = tweet.id
-    language = tweet.lang
-    username = user.username
-    profile_image = user.profile_image_url
-    tweet_text = tweet.text
-
+    key = f'user_{i}'
     information = {
-        f'user_{i}': [
-            {
-        'ID': userid,
-        'language': language,
-        'username': username,
-        'profile_image': profile_image,
-        'tweets': tweet_text
-        }]
+            'ID': userid,
+            'language': language,
+            'username': username,
+            'profile_image': profile_image,
+            'tweets': tweet_text
     }
-
     
-    save_data(SAVED_DATA, information)
+    all_information[key] = information
+            
+    print("all_information is SAVED!")
 
     print(tweet.id)
     print(tweet.lang)
     print(user.username)
     print(user.profile_image_url)
     print(tweet.text)
+    
+save_data(SAVED_DATA, all_information)

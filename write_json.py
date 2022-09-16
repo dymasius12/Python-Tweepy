@@ -10,7 +10,7 @@ SAVED_DATA = "tweets.json"
 
 # Make a file that can create JSON file for us
 def save_data(filepath, data):
-    with open(filepath, "a") as f:
+    with open(filepath, "w") as f:
         json.dump(data, f)
 
 def load_data(filepath):
