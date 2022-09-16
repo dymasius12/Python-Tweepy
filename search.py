@@ -2,6 +2,7 @@ from cgitb import text
 import tweepy
 import config
 from  write_json import SAVED_DATA, load_data, save_data
+from json_csv import json_csv
 
 client = tweepy.Client(bearer_token=config.BEARER_TOKEN)
 # Query is basically the thing you are searching
@@ -50,5 +51,6 @@ for tweet in response.data:
     print(user.username)
     print(user.profile_image_url)
     print(tweet.text)
-    
+
 save_data(SAVED_DATA, all_information)
+json_csv(JSON_FILE='tweets.json', CSV_FILE='tweets.csv')
