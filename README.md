@@ -23,13 +23,13 @@ $ pip install -r requirements.txt
 PLEASE NOTE: it needs 1 command after the filename!
 
 ```
-python app.py
+python search.py
 ```
 
 or
 
 ```
-python3 app.py
+python3 search.py
 ```
 
 ### More references:
