@@ -17,7 +17,8 @@ client = tweepy.Client(bearer_token=config.BEARER_TOKEN)
 # query = 'jual biji kopi OR jual kopi indonesia OR kopi murah OR shopee kopi OR tokopedia kopi -is:retweet -has:media'
 query = 'covid -is:retweet -has:media'
 
-counts = client.get_recent_tweets_count(query=query, granularity='day')
+# How to get count per day
+# counts = client.get_recent_tweets_count(query=query, granularity='day')
 
 for count in counts.data:
     print(count)
