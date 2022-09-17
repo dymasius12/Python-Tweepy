@@ -14,7 +14,13 @@ client = tweepy.Client(bearer_token=config.BEARER_TOKEN)
 # Query is basically the thing you are searching
 # query = 'covid OR covid19 -is:retweet -has:media'
 # query = 'kopi OR kopi enak OR kopi indonesia OR kopi viral OR kopi terkenal -is:retweet -has:media place_country:ID'
-query = 'jual biji kopi OR jual kopi indonesia OR kopi murah OR shopee kopi OR tokopedia kopi -is:retweet -has:media'
+# query = 'jual biji kopi OR jual kopi indonesia OR kopi murah OR shopee kopi OR tokopedia kopi -is:retweet -has:media'
+query = 'covid -is:retweet -has:media'
+
+counts = client.get_recent_tweets_count(query=query, granularity='day')
+
+for count in counts.data:
+    print(count)
 
 # if you want to add specific info, goes to dev platform and search inside the fundementals.
 # response = client.search_recent_tweets(query=query, max_results=100, tweet_fields=['created_at', 'lang'], user_fields=['profile_image_url'], expansions=['geo.place_id', 'author_id'])
